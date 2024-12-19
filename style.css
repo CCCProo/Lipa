@@ -1,0 +1,75 @@
+
+.block_project {
+  width: 350px;
+  height: 180px;
+  box-sizing: border-box;
+  border: 2px solid #eee;
+  margin: 10px;
+  float: left;
+  font-size: 1.3rem;
+  font-weight: bold;
+  border-radius: 10px;
+  position: relative;
+  overflow: hidden;
+  color: #656D78;
+  background-color: #ffffff80;
+  -webkit-transition: 0.2s ease-out;
+  -moz-transition: 0.2s ease-out;
+  -o-transition: 0.2s ease-out;
+  transition: 0.2s ease-out;
+  cursor: pointer;
+}
+.block_project:hover {
+  color: #fff;
+  border-color: transparent;
+}
+.block_project > div {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  overflow: hidden;
+  -webkit-transition: top 0.2s ease;
+  -moz-transition: top 0.2s ease;
+  -o-transition: top 0.2s ease;
+  transition: top 0.2s ease;
+}
+.block_project .outer {
+  top: -100%;
+  left: 0;
+}
+.block_project .inner {
+    top: 0;
+    left: 0;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: space-around;
+}
+.block_project:hover .outer {
+  top: 0;
+}
+.block_project:hover .inner {
+  top: 100%;
+}
+.bg-hover-aqua:hover {
+  background-color: #3BAFDA;
+}
+
+.button_card a {
+    background: white;
+    color: black;
+    text-decoration: none;
+    padding: 3px;
+    border-radius: 6px;
+    border: 3px solid black;
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease; /* Added transitions */
+}
+
+.button_card a:hover{
+
+    background-color: black;
+    color: white;
+    border: 3px solid white;
+
+}

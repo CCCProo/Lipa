@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ru"><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Добро пожаловать на Lipa</title>
+    <!-- Подключение Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&amp;display=swap" rel="stylesheet">
+    <!-- Подключение стилей -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Контейнер для анимированного фона -->
+    <div class="background"></div>
+
+    <!-- Навигационная панель -->
+    <nav class="navbar">
+        <a href="index.html" class="logo">LIPA</a>
+        <div class="nav-links">
+            <a href="projects.html">Проекты</a>
+        </div>
+        <div class="nav-actions">
+            <button class="hamburger" id="hamburger" aria-label="Меню навигации" aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <div class="mobile-menu" id="mobileMenu" aria-hidden="true">
+        <a href="projects.html">Проекты</a>
+        <a href="about.html">О нас</a>
+    </div>
+
+    <main class="welcome-container">
+        <h1 class="welcome-message" id="welcomeMessage"></h1>
+    </main>
+
+    <script src="scripts.js"></script>
+
+</body>
+</html>
