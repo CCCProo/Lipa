@@ -47,6 +47,42 @@ function initMobileMenu() {
     }
 }
 
+function initTheme() {
+    const themeToggle = document.getElementById('themeToggle');
+    const body = document.body;
+    const prefersDarkScheme = window.matchMedia("(prefers-color-scheme: dark)");
+
+    const applyTheme = (isDark) => {
+        body.classList.toggle('dark-theme', isDark);
+    };
+
+    const savedTheme = localStorage.getItem('theme');
+
+    if (savedTheme) {
+        applyTheme(savedTheme === 'dark');
+    } else {
+        applyTheme(prefersDarkScheme.matches);
+    }
+
+    if (themeToggle) {
+        themeToggle.addEventListener('click', () => {
+            const isDark = body.classList.toggle('dark-theme');
+            if (isDark) {
+                localStorage.setItem('theme', 'dark');
+            } else {
+                localStorage.setItem('theme', 'light');
+            }
+        });
+    }
+
+    prefersDarkScheme.addEventListener('change', (e) => {
+        if (!localStorage.getItem('theme')) {
+            applyTheme(e.matches);
+        }
+    });
+}
+
+// Инициализация всех функций при загрузке страницы
 window.addEventListener('DOMContentLoaded', () => {
     initWelcome();
     initMobileMenu();
