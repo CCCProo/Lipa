@@ -45,6 +45,7 @@
     text-align: center;
     align-items: center;
     justify-content: space-around;
+    color: white;
 }
 .block_project:hover .outer {
   top: 0;
