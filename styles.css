@@ -87,6 +87,7 @@ html, body {
     font-weight: 700;
     color: var(--nav-text-color);
     text-decoration: none;
+    font-family: 'VT323', monospace;
 }
 
 .navbar .nav-links {
@@ -95,16 +96,8 @@ html, body {
 }
 
 .navbar .nav-links a {
-    color: var(--nav-text-color);
     text-decoration: none;
     font-size: 1rem;
-    transition: color var(--transition-speed);
-}
-
-.navbar .nav-links a:hover,
-.navbar .nav-links a:focus {
-    color: var(--nav-hover-color);
-    outline: none;
 }
 
 .nav-actions {
@@ -167,15 +160,14 @@ html, body {
     display: none;
     flex-direction: column;
     position: fixed;
-    top: calc(var(--navbar-height) + 10px);
-    right: 40px;
+    top: calc(var(--navbar-height));
     background-color: var(--mobile-menu-background);
-    border-radius: 8px;
     overflow: hidden;
     z-index: 20;
     transition: opacity var(--transition-speed) ease, transform var(--transition-speed) ease;
     transform: scale(0.95);
     opacity: 0;
+    width: 100%;
 }
 
 .mobile-menu.active {
@@ -189,7 +181,7 @@ html, body {
     padding: 15px 20px;
     text-decoration: none;
     border-bottom: 1px solid rgba(255, 255, 255, 0.2);
-    transition: background var(--transition-speed), color var(--transition-speed);
+    transition: background 0.5s, color 0.5s;
 }
 
 .mobile-menu a:last-child {
@@ -198,9 +190,8 @@ html, body {
 
 .mobile-menu a:hover,
 .mobile-menu a:focus {
-    background-color: rgba(255, 255, 255, 0.1);
-    color: var(--nav-hover-color);
-    outline: none;
+    background: rgb(255, 255, 255);
+  color: #000;
 }
 
 main {
@@ -241,6 +232,7 @@ main {
     margin-bottom: 40px;
     font-size: 2.5rem;
     text-align: center;
+    margin-top: 20px;
 }
 
 .project-container {

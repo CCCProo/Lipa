@@ -84,6 +84,14 @@ function initTheme() {
 
 // Инициализация всех функций при загрузке страницы
 window.addEventListener('DOMContentLoaded', () => {
-    initWelcome();
+    //initWelcome();
     initMobileMenu();
 });
+
+const text = baffle('.welcome-message');
+text.set({
+  characters: '!/|~#.^+*$#%nwf',
+  speed: 100
+});
+text.start();
+text.reveal(2000);
